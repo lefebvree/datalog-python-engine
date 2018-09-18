@@ -1,0 +1,22 @@
+
+% Wrong arity for a
+
+a($a,$b).
+c($a).
+d($a,$a,$a,$a).
+e($a).
+
+a($a,$b) -> c($b).
+a($a,$b) -> c($a).
+
+c($a) -> d($a,$a,$a,$a).
+d($a,$a,$a,$a) -> e($a).
+
+% WRONG ARITY FOR a
+e($a), c($a), a($a, $a, $a) -> d($a,$a,$a,$a).
+
+e($a) -> query($a).
+
+a(test1,test2).
+a(test2,test3).
+a(test4,test4).

@@ -1,0 +1,139 @@
+
+% IDBS
+
+person($x).
+married($x, $y).
+female($x).
+male($x).
+mother($x, $y).
+father($x, $y).
+worksat($x, $y).
+brother($x, $y).
+sister($x, $y).
+child($x, $y).
+parent($x, $y).
+retired($x).
+employed($x).
+sibling($x, $y).
+ancestor($x, $y).
+descendant($x, $y).
+grandparent($x, $y).
+grandmother($x, $y).
+grandfather($x, $y).
+related($x, $y).
+cousin($x, $y).
+
+% EDB
+
+married(adam, alice).
+male(adam).
+worksat(adam, abcelectric).
+female(alice).
+worksat(alice, xyzcars).
+child(bart, adam).
+male(bart).
+worksat(bart, pqrrailroad).
+child(beth, adam).
+female(beth).
+worksat(beth, rstbank).
+
+married(albert, anne).
+male(albert).
+worksat(albert, rstbank).
+female(anne).
+retired(anne).
+child(bert, albert).
+male(bert).
+worksat(bert, xyzcars).
+married(beth, bert).
+child(carl, bert).
+male(carl).
+retired(carl).
+child(carol, beth).
+female(carol).
+
+child(dolly, carol).
+female(dolly).
+child(daisy, carl).
+female(daisy).
+
+married(dolly, dupont).
+male(dupont).
+child(edgar, dolly).
+male(edgar).
+worksat(edgar, abcelectric).
+child(elvin, dolly).
+male(elvin).
+
+married(elvin, elisa).
+female(elisa).
+worksat(elisa, xyzcars).
+child(elisa, dorothy).
+female(dorothy).
+worksat(dorothy, abcelectric).
+child(dorothy, chris).
+male(chris).
+married(chris, constance).
+female(constance).
+child(constance, bethany).
+female(bethany).
+worksat(bethany, xyzcars).
+child(dieter, constance).
+male(dieter).
+worksat(dieter, pqrrailroad).
+
+married(bart, betty).
+female(betty).
+worksat(betty, pqrrailroad).
+child(betty, abe).
+male(abe).
+retired(abe).
+married(abe, abeline).
+worksat(abeline, abcelectric).
+child(cobus, betty).
+male(cobus).
+child(connie, bart).
+female(connie).
+
+child(dwight, connie).
+male(dwight).
+child(dwayne, connie).
+male(dwayne).
+
+% ========== Rules ==========
+
+male($X)                                                        -> person($X).
+female($X)                                                      -> person($X).
+married($Spouse, $Me)                                           -> married($Me, $Spouse).
+child($Child, $Spouse), married($Parent, $Spouse)               -> child($Child, $Parent).
+child($Child, $Parent)                                          -> parent($Parent, $Child).
+parent($Parent, $Me), parent($Parent, $Who)                     -> sibling($Me, $Who).
+sibling($Me, $He), male($He)                                    -> brother($Me, $He).
+sibling($Me, $She), female($She)                                -> sister($Me, $She).
+parent($Ancestor, $Descendant)                                  -> ancestor($Ancestor, $Descendant).
+ancestor($Ancestor, $X), parent($X, $Descendant)                -> ancestor($Ancestor, $Descendant).
+ancestor($Ancestor, $Descendant)                                -> descendant($Descendant, $Ancestor).
+parent($Father, $Child), male($Father)                          -> father($Father, $Child).
+parent($Mother, $Child), female($Mother)                        -> mother($Mother, $Child).
+parent($Grandparent, $Parent), parent($Parent, $Grandchild)     -> grandparent($Grandparent, $Grandchild).
+grandparent($Grandfather, $Grandchild), male($Grandfather)      -> grandfather($Grandfather, $Grandchild).
+grandparent($Grandmother, $Grandchild), female($Grandmother)    -> grandmother($Grandmother, $Grandchild).
+grandparent($Grandparent, $Me), grandparent($Grandparent, $Who) -> cousin($Me, $Who).
+ancestor($Ancestor, $Me), ancestor($Ancestor, $Who)             -> related($Me, $Who).
+worksat($Who, $Company)                                         -> employed($Who).
+
+% ========== Queries ==========
+
+married(alice, $AliceSpouse) -> query($AliceSpouse).
+#child($AliceChild, alice) -> query($AliceChild).
+
+descendant($AdamDescendant, adam) -> query($AdamDescendant).
+#father(adam, $AdamChild) -> query($AdamChild).
+#mother($CarlMother, carl) -> query($CarlMother).
+#grandfather($CarolGrandfather, carol) -> query($CarolGrandfather).
+#grandmother($CarlGrandmother, carl) -> query($CarlGrandmother).
+#grandparent($ConnieFemaleGrandparent, connie), female($ConnieFemaleGrandparent) -> query($ConnieFemaleGrandparent).
+#cousin(connie, $ConnieCousin) -> query($ConnieCousin).
+
+worksat($Worker, $Company) -> query($Worker, $Company).
+#employed($Employed) -> query($Employed).

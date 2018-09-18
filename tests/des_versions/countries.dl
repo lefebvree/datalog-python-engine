@@ -1,0 +1,501 @@
+
+:-type(country(name:string,code:string,capital:string,province:string,area:int,population:int)).
+
+country('Albania','AL','Tirana','Albania',28750,2800138).
+country('Greece','GR','Athina','Attikis',131940,10816286).
+country('Macedonia','MK','Skopje','Macedonia',25333,2059794).
+country('Serbia','SRB','Beograd','Serbia',77474,7120666).
+country('Montenegro','MNE','Podgorica','Montenegro',14026,620029).
+country('Kosovo','KOS','Prishtine','Kosovo',10887,1733872).
+country('Andorra','AND','Andorra la Vella','Andorra',450,78115).
+country('France','F','Paris','Ile-de-France',547030,64933400).
+country('Spain','E','Madrid','Madrid',504750,46815916).
+country('Austria','A','Wien','Wien',83850,8499759).
+country('Czech Republic','CZ','Praha','Praha',78703,10562214).
+country('Germany','D','Berlin','Berlin',356910,80219695).
+country('Hungary','H','Budapest','Budapest',93030,9937628).
+country('Italy','I','Roma','Lazio',301230,59433744).
+country('Liechtenstein','FL','Vaduz','Liechtenstein',160,36636).
+country('Slovakia','SK','Bratislava','Bratislavský',48845,5397036).
+country('Slovenia','SLO','Ljubljana','Slovenia',20256,2058821).
+country('Switzerland','CH','Bern','Bern',41290,8139631).
+country('Belarus','BY','Minsk','Minsk City',207600,9460692).
+country('Latvia','LV','Rīga','Latvia',64100,2201196).
+country('Lithuania','LT','Vilnius','Lithuania',65200,2979310).
+country('Poland','PL','Warszawa','Mazowieckie',312683,38533789).
+country('Ukraine','UA','Kyïv','Kyïv',603700,45633637).
+country('Russia','R','Moskva','Moscow',17075200,143666931).
+country('Belgium','B','Bruxelles','Bruxelles',30510,11099554).
+country('Luxembourg','L','Luxembourg','Luxembourg',2586,524853).
+country('Netherlands','NL','Amsterdam','Noord-Holland',37330,16843181).
+country('Bosnia and Herzegovina','BIH','Sarajevo','Federacija Bosne i Hercegovine',51233,3791622).
+country('Croatia','HR','Zagreb','Croatia',56538,4290612).
+country('Bulgaria','BG','Sofia','Bulgaria',110910,7284552).
+country('Romania','RO','Bucuresti','Bucuresti',237500,20121641).
+country('Turkey','TR','Ankara','Ankara',780580,75627384).
+country('Denmark','DK','Copenhagen','Hovedstaden',43070,5678348).
+country('Estonia','EW','Tallinn','Estonia',45100,1294455).
+country('Faroe Islands','FARX','Tórshavn','Faroe Islands',1400,48197).
+country('Finland','SF','Helsinki','Uusimaa',337030,5455068).
+country('Norway','N','Oslo','Oslo',324220,5051275).
+country('Sweden','S','Stockholm','Stockholm',449964,9555893).
+country('Monaco','MC','Monaco','Monaco',2,36845).
+country('Gibraltar','GBZ','Gibraltar','Gibraltar',7,32577).
+country('Guernsey','GBG','Saint Peter Port','Guernsey',194,59807).
+country('Holy See','V','Vatican City','Holy See',1,842).
+country('Ceuta','CEU','Ceuta','Ceuta',18,82376).
+country('Melilla','MEL','Melilla','Melilla',12,78476).
+country('Iceland','IS','Reykjavik','Iceland',103000,318452).
+country('Ireland','IRL','Dublin','Ireland',70280,4588252).
+country('San Marino','RSM','San Marino','San Marino',60,32440).
+country('Jersey','GBJ','Saint Helier','Jersey',117,97857).
+country('Malta','M','Valletta','Malta',320,417432).
+country('Isle of Man','GBM','Douglas','Isle of Man',588,84497).
+country('Moldova','MD','Chisinau','Moldova',33700,3559541).
+country('Portugal','P','Lisboa','Lisboa',92080,10561614).
+country('Svalbard','SVAX','Longyearbyen','Svalbard',62049,1872).
+country('United Kingdom','GB','London','London',244820,64105654).
+country('Afghanistan','AFG','Kabul','Afghanistan',647500,26023100).
+country('China','CN','Beijing','Beijing',9596960,1360720000).
+country('Iran','IR','Tehran','Tehran',1648000,75149669).
+country('Pakistan','PK','Islamabad','FCT Islamabad',803940,173149306).
+country('Tajikistan','TAD','Dushanbe','Dushanbe',143100,8161100).
+country('Turkmenistan','TM','Ashgabat','Ashgabat',488100,5041995).
+country('Uzbekistan','UZB','Toshkent','Toshkent City',447400,27769270).
+country('Armenia','ARM','Yerevan','Armenia',29800,3026879).
+country('Georgia','GE','Tbilisi','Georgia',69700,4483800).
+country('Azerbaijan','AZ','Baku','Azerbaijan',86600,9356500).
+country('Bahrain','BRN','Al Manamah','Bahrain',620,1234596).
+country('Bangladesh','BD','Dhaka','Dhaka',144000,149772364).
+country('Myanmar','MYA','Nay Pyi Taw','Nay Pyi Taw',678500,51419420).
+country('India','IND','Delhi','Delhi',3287590,1210854977).
+country('Bhutan','BHT','Thimphu','Bhutan',47000,733004).
+country('Brunei','BRU','Bandar Seri Begawan','Brunei',5770,393372).
+country('Malaysia','MAL','Kuala Lumpur','Kuala Lumpur',329750,27565821).
+country('Laos','LAO','Vientiane','Laos',236800,6514432).
+country('Thailand','THA','Bangkok','Thailand',514000,65981659).
+country('Cambodia','K','Phnom Penh','Cambodia',181040,14364931).
+country('Vietnam','VN','Hanoi','Red River Delta',329560,88772900).
+country('Kazakhstan','KAZ','Astana','Astana',2717300,17165239).
+country('North Korea','NOK','Pyongyang','North Korea',120540,24500520).
+country('Kyrgyzstan','KGZ','Bishkek','Kyrgyzstan',198500,5776600).
+country('Hong Kong','HONX','Hong Kong','Hong Kong',1092,7071576).
+country('Macao','MACX','Macao','Macao',16,552503).
+country('Mongolia','MNG','Ulaanbaatar','Mongolia',1565000,2754685).
+country('Nepal','NEP','Kathmandu','Nepal',140800,26494504).
+country('Christmas Island','XMAS','Flying Fish Cove','Christmas Island',135,2072).
+country('Cocos Islands','COCO','West Island','Cocos Islands',14,596).
+country('Cyprus','CY','Lefkosia','Cyprus',9251,840407).
+country('Gaza Strip','GAZA',null,null,365,1760037).
+country('Israel','IL','Yerushalayim','Yerushalayim',22072,7420368).
+country('Egypt','ET','Al Qahirah','Egypt',1001450,83667047).
+country('Indonesia','RI','Jakarta','DKI Jakarta',1919440,252124458).
+country('Timor-Leste','TL','Dili','Timor-Leste',15007,1066582).
+country('Papua New Guinea','PNG','Port Moresby','Papua New Guinea',461690,7275324).
+country('Iraq','IRQ','Baghdad','Baghdad',437072,33330512).
+country('Jordan','JOR','Amman','Jordan',89213,6249000).
+country('Kuwait','KWT','Al Kuwayt','Kuwait',17820,2991580).
+country('Saudi Arabia','SA','Riyadh','Al-Riyadh',1960582,27136977).
+country('Syria','SYR','Dimashq','Dimashq',185180,20866000).
+country('Lebanon','RL','Bayrūt','Lebanon',10400,4341092).
+country('West Bank','WEST','Ramallah','West Bank',5655,2790331).
+country('Japan','J','Tokyo','Tokyo',377835,127298000).
+country('South Korea','ROK','Seoul','South Korea',98480,51141463).
+country('Maldives','MV','Male','Maldives',300,341256).
+country('Oman','OM','Muscat','Oman',212460,3623001).
+country('United Arab Emirates','UAE','Abu Dhabi','United Arab Emirates',75581,8441537).
+country('Yemen','YE','Sana''a','Yemen',527970,24527000).
+country('Philippines','RP','Manila','Metro Manila',299764,92337852).
+country('Qatar','Q','Doha','Qatar',11000,1699435).
+country('Singapore','SGP','Singapore','Singapore',632,5076700).
+country('Sri Lanka','CL','Sri Jayawardhanapura','Sri Lanka',65610,20263723).
+country('Taiwan','RC','Taipei','Taiwan',36179,23315822).
+country('Anguilla','AXA','The Valley','Anguilla',102,13037).
+country('Antigua and Barbuda','AG','Saint Johns','Antigua and Barbuda',442,81799).
+country('Aruba','ARU','Oranjestad','Aruba',193,101484).
+country('Bahamas','BS','Nassau','Bahamas',13940,353658).
+country('Barbados','BDS','Bridgetown','Barbados',430,277821).
+country('Belize','BZ','Belmopan','Belize',22960,312971).
+country('Guatemala','GCA','Ciudad de Guatemala','Guatemala',108890,15073375).
+country('Mexico','MEX','Ciudad de México','Distrito Federal',1972550,112336538).
+country('Bermuda','BERM','Hamilton','Bermuda',53,64237).
+country('British Virgin Islands','BVIR','Road Town','British Virgin Islands',153,23161).
+country('Canada','CDN','Ottawa','Ontario',9976140,35158304).
+country('United States','USA','Washington','District of Columbia',9372610,318857056).
+country('Cayman Islands','CAYM','George Town','Cayman Islands',262,55691).
+country('Costa Rica','CR','San José','San José',51100,4773119).
+country('Nicaragua','NIC','Managua','Nicaragua',129494,6071045).
+country('Panama','PA','Panamá City','Panamá',78200,3405813).
+country('Cuba','C','La Habana','La Habana',110860,11167325).
+country('Dominica','WD','Roseau','Dominica',746,70739).
+country('Dominican Republic','DOM','Santo Domingo','Dominican Republic',48730,9445281).
+country('Haiti','RH','Port-au-Prince','Haiti',27750,9896400).
+country('El Salvador','ES','San Salvador','El Salvador',21040,6290420).
+country('Honduras','HCA','Tegucigalpa','Francisco Morazán',112090,8045990).
+country('Greenland','GROX','Nuuk','Greenland',2175600,56370).
+country('Grenada','WG','Saint George''s','Grenada',344,103328).
+country('Guadeloupe','GUAD','Basse-Terre','Guadeloupe',1628,404635).
+country('Jamaica','JA','Kingston','Jamaica',10991,2697983).
+country('Martinique','MART','Fort-de-France','Martinique',1128,392291).
+country('Montserrat','MNTS','Plymouth','Montserrat',102,4922).
+country('Curacao','CUR','Willemstad','Curacao',444,150563).
+country('Sint Maarten','NLSM','Philipsburg','Sint Maarten',34,37429).
+country('Saint Martin','SMAR','Marigot','Saint Martin',54,37630).
+country('Saint Barthelemy','SBAR','Gustavia','Saint Barthelemy',21,9072).
+country('Colombia','CO','Bogotá','Santa Fe de Bogotá',1138910,47661787).
+country('Puerto Rico','PR','San Juan','Puerto Rico',8870,3725789).
+country('Saint Kitts and Nevis','KN','Basseterre','Saint Kitts and Nevis',269,52352).
+country('Saint Lucia','WL','Castries','Saint Lucia',620,165595).
+country('Saint Pierre and Miquelon','SPMI','Saint-Pierre','Saint Pierre and Miquelon',242,6312).
+country('Saint Vincent and the Grenadines','WV','Kingstown','Saint Vincent and the Grenadines',389,109991).
+country('Trinidad and Tobago','TT','Port-of-Spain','Trinidad and Tobago',5130,1328019).
+country('Turks and Caicos Islands','TUCA','Grand Turk','Turks and Caicos Islands',430,31458).
+country('Virgin Islands','VIRG','Charlotte Amalie','Virgin Islands',352,106405).
+country('American Samoa','AMSA','Pago Pago','American Samoa',199,55519).
+country('Australia','AUS','Canberra','Australia Capital Territory',7686850,23135281).
+country('Cook Islands','COOK','Avarua','Cook Islands',240,17794).
+country('Fiji','FJI','Suva','Fiji',18270,860559).
+country('French Polynesia','FPOL','Papeete','French Polynesia',4167,268270).
+country('Guam','GUAM','Hagatna','Guam',541,159358).
+country('Kiribati','KIR','Tarawa','Kiribati',717,103058).
+country('Marshall Islands','MH','Majuro','Marshall Islands',181,53158).
+country('Micronesia','FSM','Palikir','Micronesia',702,102843).
+country('Nauru','NAU','Yaren','Nauru',21,10025).
+country('New Caledonia','NCA','Noumea','New Caledonia',19060,245580).
+country('New Zealand','NZ','Wellington','New Zealand',268680,4242048).
+country('Niue','NIUE','Alofi','Niue',260,1611).
+country('Norfolk Island','NORF','Kingston','Norfolk Island',34,2169).
+country('Northern Mariana Islands','NMIS','Saipan','Northern Mariana Islands',477,53883).
+country('Palau','PAL','Melekeok','Palau',458,17501).
+country('Pitcairn','PITC','Adamstown','Pitcairn',47,56).
+country('Solomon Islands','SLB','Honiara','Solomon Islands',28450,526447).
+country('Tonga','TO','Nukualofa','Tonga',748,103252).
+country('Tuvalu','TUV','Funafuti','Tuvalu',26,9827).
+country('Tokelau','TOK','Fakaofo','Tokelau',12,1383).
+country('Vanuatu','VU','Port Vila','Vanuatu',14760,236299).
+country('Wallis and Futuna','WAFU','Mata-Utu','Wallis and Futuna',274,12197).
+country('Samoa','WS','Apia','Samoa',2860,187820).
+country('Argentina','RA','Buenos Aires','Distrito Federal',2766890,42669500).
+country('Bolivia','BOL','La Paz','La Paz',1098580,10027262).
+country('Brazil','BR','Brasília','Distrito Federal',8511965,202768562).
+country('Chile','RCH','Santiago','Santiago',756950,16341929).
+country('Paraguay','PY','Asunción','Paraguay',406750,6672631).
+country('Uruguay','ROU','Montevideo','Uruguay',176220,3286314).
+country('Peru','PE','Lima','Lima City',1285220,30135875).
+country('French Guiana','FGU','Cayenne','French Guiana',83534,237549).
+country('Guyana','GUY','Georgetown','Guyana',214970,747884).
+country('Suriname','SME','Paramaribo','Suriname',163270,541638).
+country('Venezuela','YV','Caracas','Distrito Federal',912050,28946101).
+country('Ecuador','EC','Quito','Ecuador',283560,14483499).
+country('Falkland Islands','FALK','Stanley','Falkland Islands',12173,2931).
+country('Algeria','DZ','Algiers','Algeria',2381740,37062820).
+country('Libya','LAR','Tripoli','Libya',1759540,6040612).
+country('Mali','RMM','Bamako','Bamako',1240000,13985961).
+country('Mauritania','RIM','Nouakchott','Nouakchott',1030700,3537368).
+country('Morocco','MA','Rabat','Rabat Sale Zemmour Zaer',446550,32901622).
+country('Niger','RN','Niamey','Niamey',1267000,17138707).
+country('Tunisia','TN','Tunis','Tunisia',163610,10982754).
+country('Western Sahara','WSA','El Aaiun','Western Sahara',266000,554795).
+country('Angola','ANG','Luanda','Luanda',1246700,24383301).
+country('Congo','RCB','Brazzaville','Brazzaville',342000,4001831).
+country('Namibia','NAM','Windhoek','Namibia',825418,2113077).
+country('Zaire','ZRE','Kinshasa','Kinshasa',2345410,62191161).
+country('Zambia','Z','Lusaka','Lusaka',752610,13046508).
+country('Benin','BEN','Porto-Novo','Benin',112620,9983884).
+country('Burkina Faso','BF','Ouagadougou','Burkina Faso',274200,17322796).
+country('Nigeria','WAN','Abuja','Abuja',923770,164294516).
+country('Togo','RT','Lomé','Togo',56790,6191155).
+country('Botswana','RB','Gaborone','Botswana',600370,2038228).
+country('South Africa','RSA','Tshwane','Gauteng',1219912,51770560).
+country('Zimbabwe','ZW','Harare','Zimbabwe',390580,13061239).
+country('Cote d''Ivoire','CI','Yamoussoukro','Lacs',322460,22671331).
+country('Ghana','GH','Accra','Greater Accra',238540,24658823).
+country('Burundi','BI','Bujumbura','Burundi',27830,8444784).
+country('Rwanda','RWA','Kigali','Rwanda',26340,10515973).
+country('Tanzania','EAT','Dodoma','Dodoma',945090,44928923).
+country('Cameroon','CAM','Yaoundé','Centre',475440,19406100).
+country('Central African Republic','RCA','Bangui','Central African Republic',622980,4349921).
+country('Chad','TCH','N''Djamena','Chad',1284000,11720781).
+country('Equatorial Guinea','GQ','Malabo','Insular',28050,696167).
+country('Gabon','G','Libreville','Gabon',267670,1556222).
+country('Cape Verde','CV','Praia','Cape Verde',4033,491875).
+country('Sudan','SUD','Khartoum','Sudan',1861484,35652002).
+country('South Sudan','SSD','Juba','South Sudan',644329,8260490).
+country('Comoros','COM','Moroni','Comoros',2170,683081).
+country('Guinea','RG','Conakry','Guinea',245860,10628972).
+country('Liberia','LB','Monrovia','Liberia',111370,3957990).
+country('Djibouti','DJI','Djibouti','Djibouti',22000,834036).
+country('Eritrea','ER','Asmara','Eritrea',121320,5741159).
+country('Ethiopia','ETH','Addis Ababa','Addis Ababa',1127127,84320987).
+country('Somalia','SP','Mogadishu','Somalia',637660,9636173).
+country('Kenya','EAK','Nairobi','Kenya',582650,40909194).
+country('Gambia','WAG','Banjul','Gambia',11300,1882450).
+country('Senegal','SN','Dakar','Dakar',196190,13508715).
+country('Guinea-Bissau','GNB','Bissau','Guinea-Bissau',36120,1586624).
+country('Sierra Leone','WAL','Freetown','Sierra Leone',71740,5751976).
+country('Uganda','EAU','Kampala','Central',236040,34634650).
+country('Lesotho','LS','Maseru','Lesotho',30350,2008921).
+country('Madagascar','RM','Antananarivo','Madagascar',587041,21842167).
+country('Malawi','MW','Lilongwe','Malawi',118480,15013694).
+country('Mozambique','MOC','Maputo','Cidade de Maputo',801590,23700715).
+country('Mauritius','MS','Port Louis','Mauritius',2040,1237091).
+country('Mayotte','MAYO','Mamoutzou','Mayotte',374,212645).
+country('Swaziland','SD','Mbabane','Swaziland',17360,1193148).
+country('Reunion','REUN','Saint-Denis','Reunion',2510,828581).
+country('Saint Helena','HELX','Jamestown','Saint Helena',413,5663).
+country('Sao Tome and Principe','STP','São Tomé','Sao Tome and Principe',1001,187356).
+country('Seychelles','SY','Victoria','Seychelles',455,90945).
+
+:-type(encompasses(country:string,continent:string,percentage:number(float))).
+
+encompasses('AL','Europe',100).
+encompasses('GR','Europe',100).
+encompasses('MK','Europe',100).
+encompasses('SRB','Europe',100).
+encompasses('MNE','Europe',100).
+encompasses('KOS','Europe',100).
+encompasses('AND','Europe',100).
+encompasses('F','Europe',100).
+encompasses('E','Europe',100).
+encompasses('A','Europe',100).
+encompasses('CZ','Europe',100).
+encompasses('D','Europe',100).
+encompasses('H','Europe',100).
+encompasses('I','Europe',100).
+encompasses('FL','Europe',100).
+encompasses('SK','Europe',100).
+encompasses('SLO','Europe',100).
+encompasses('CH','Europe',100).
+encompasses('BY','Europe',100).
+encompasses('LV','Europe',100).
+encompasses('LT','Europe',100).
+encompasses('PL','Europe',100).
+encompasses('UA','Europe',100).
+encompasses('R','Europe',25).
+encompasses('R','Asia',75).
+encompasses('B','Europe',100).
+encompasses('L','Europe',100).
+encompasses('NL','Europe',100).
+encompasses('BIH','Europe',100).
+encompasses('HR','Europe',100).
+encompasses('BG','Europe',100).
+encompasses('RO','Europe',100).
+encompasses('TR','Europe',3).
+encompasses('TR','Asia',97).
+encompasses('DK','Europe',100).
+encompasses('EW','Europe',100).
+encompasses('FARX','Europe',100).
+encompasses('SF','Europe',100).
+encompasses('N','Europe',100).
+encompasses('S','Europe',100).
+encompasses('MC','Europe',100).
+encompasses('GBZ','Europe',100).
+encompasses('GBG','Europe',100).
+encompasses('V','Europe',100).
+encompasses('CEU','Africa',100).
+encompasses('MEL','Africa',100).
+encompasses('IS','Europe',100).
+encompasses('IRL','Europe',100).
+encompasses('RSM','Europe',100).
+encompasses('GBJ','Europe',100).
+encompasses('M','Europe',100).
+encompasses('GBM','Europe',100).
+encompasses('MD','Europe',100).
+encompasses('P','Europe',100).
+encompasses('SVAX','Europe',100).
+encompasses('GB','Europe',100).
+encompasses('AFG','Asia',100).
+encompasses('CN','Asia',100).
+encompasses('IR','Asia',100).
+encompasses('PK','Asia',100).
+encompasses('TAD','Asia',100).
+encompasses('TM','Asia',100).
+encompasses('UZB','Asia',100).
+encompasses('ARM','Asia',100).
+encompasses('GE','Asia',100).
+encompasses('AZ','Asia',100).
+encompasses('BRN','Asia',100).
+encompasses('BD','Asia',100).
+encompasses('MYA','Asia',100).
+encompasses('IND','Asia',100).
+encompasses('BHT','Asia',100).
+encompasses('BRU','Asia',100).
+encompasses('MAL','Asia',100).
+encompasses('LAO','Asia',100).
+encompasses('THA','Asia',100).
+encompasses('K','Asia',100).
+encompasses('VN','Asia',100).
+encompasses('KAZ','Europe',5.4).
+encompasses('KAZ','Asia',94.6).
+encompasses('NOK','Asia',100).
+encompasses('KGZ','Asia',100).
+encompasses('HONX','Asia',100).
+encompasses('MACX','Asia',100).
+encompasses('MNG','Asia',100).
+encompasses('NEP','Asia',100).
+encompasses('XMAS','Australia/Oceania',100).
+encompasses('COCO','Australia/Oceania',100).
+encompasses('CY','Europe',100).
+encompasses('GAZA','Asia',100).
+encompasses('IL','Asia',100).
+encompasses('ET','Asia',7.3).
+encompasses('ET','Africa',92.7).
+encompasses('RI','Asia',78).
+encompasses('RI','Australia/Oceania',22).
+encompasses('TL','Asia',100).
+encompasses('PNG','Australia/Oceania',100).
+encompasses('IRQ','Asia',100).
+encompasses('JOR','Asia',100).
+encompasses('KWT','Asia',100).
+encompasses('SA','Asia',100).
+encompasses('SYR','Asia',100).
+encompasses('RL','Asia',100).
+encompasses('WEST','Asia',100).
+encompasses('J','Asia',100).
+encompasses('ROK','Asia',100).
+encompasses('MV','Asia',100).
+encompasses('OM','Asia',100).
+encompasses('UAE','Asia',100).
+encompasses('YE','Asia',100).
+encompasses('RP','Asia',100).
+encompasses('Q','Asia',100).
+encompasses('SGP','Asia',100).
+encompasses('CL','Asia',100).
+encompasses('RC','Asia',100).
+encompasses('AXA','America',100).
+encompasses('AG','America',100).
+encompasses('ARU','America',100).
+encompasses('BS','America',100).
+encompasses('BDS','America',100).
+encompasses('BZ','America',100).
+encompasses('GCA','America',100).
+encompasses('MEX','America',100).
+encompasses('BERM','America',100).
+encompasses('BVIR','America',100).
+encompasses('CDN','America',100).
+encompasses('USA','America',100).
+encompasses('CAYM','America',100).
+encompasses('CR','America',100).
+encompasses('NIC','America',100).
+encompasses('PA','America',100).
+encompasses('C','America',100).
+encompasses('WD','America',100).
+encompasses('DOM','America',100).
+encompasses('RH','America',100).
+encompasses('ES','America',100).
+encompasses('HCA','America',100).
+encompasses('GROX','America',100).
+encompasses('WG','America',100).
+encompasses('GUAD','America',100).
+encompasses('JA','America',100).
+encompasses('MART','America',100).
+encompasses('MNTS','America',100).
+encompasses('CUR','America',100).
+encompasses('NLSM','America',100).
+encompasses('SMAR','America',100).
+encompasses('SBAR','America',100).
+encompasses('CO','America',100).
+encompasses('PR','America',100).
+encompasses('KN','America',100).
+encompasses('WL','America',100).
+encompasses('SPMI','America',100).
+encompasses('WV','America',100).
+encompasses('TT','America',100).
+encompasses('TUCA','America',100).
+encompasses('VIRG','America',100).
+encompasses('AMSA','Australia/Oceania',100).
+encompasses('AUS','Australia/Oceania',100).
+encompasses('COOK','Australia/Oceania',100).
+encompasses('FJI','Australia/Oceania',100).
+encompasses('FPOL','Australia/Oceania',100).
+encompasses('GUAM','Australia/Oceania',100).
+encompasses('KIR','Australia/Oceania',100).
+encompasses('MH','Australia/Oceania',100).
+encompasses('FSM','Australia/Oceania',100).
+encompasses('NAU','Australia/Oceania',100).
+encompasses('NCA','Australia/Oceania',100).
+encompasses('NZ','Australia/Oceania',100).
+encompasses('NIUE','Australia/Oceania',100).
+encompasses('NORF','Australia/Oceania',100).
+encompasses('NMIS','Australia/Oceania',100).
+encompasses('PAL','Australia/Oceania',100).
+encompasses('PITC','Australia/Oceania',100).
+encompasses('SLB','Australia/Oceania',100).
+encompasses('TO','Australia/Oceania',100).
+encompasses('TUV','Australia/Oceania',100).
+encompasses('TOK','Australia/Oceania',100).
+encompasses('VU','Australia/Oceania',100).
+encompasses('WAFU','Australia/Oceania',100).
+encompasses('WS','Australia/Oceania',100).
+encompasses('RA','America',100).
+encompasses('BOL','America',100).
+encompasses('BR','America',100).
+encompasses('RCH','America',100).
+encompasses('PY','America',100).
+encompasses('ROU','America',100).
+encompasses('PE','America',100).
+encompasses('FGU','America',100).
+encompasses('GUY','America',100).
+encompasses('SME','America',100).
+encompasses('YV','America',100).
+encompasses('EC','America',100).
+encompasses('FALK','America',100).
+encompasses('DZ','Africa',100).
+encompasses('LAR','Africa',100).
+encompasses('RMM','Africa',100).
+encompasses('RIM','Africa',100).
+encompasses('MA','Africa',100).
+encompasses('RN','Africa',100).
+encompasses('TN','Africa',100).
+encompasses('WSA','Africa',100).
+encompasses('ANG','Africa',100).
+encompasses('RCB','Africa',100).
+encompasses('NAM','Africa',100).
+encompasses('ZRE','Africa',100).
+encompasses('Z','Africa',100).
+encompasses('BEN','Africa',100).
+encompasses('BF','Africa',100).
+encompasses('WAN','Africa',100).
+encompasses('RT','Africa',100).
+encompasses('RB','Africa',100).
+encompasses('RSA','Africa',100).
+encompasses('ZW','Africa',100).
+encompasses('CI','Africa',100).
+encompasses('GH','Africa',100).
+encompasses('BI','Africa',100).
+encompasses('RWA','Africa',100).
+encompasses('EAT','Africa',100).
+encompasses('CAM','Africa',100).
+encompasses('RCA','Africa',100).
+encompasses('TCH','Africa',100).
+encompasses('GQ','Africa',100).
+encompasses('G','Africa',100).
+encompasses('CV','Africa',100).
+encompasses('SUD','Africa',100).
+encompasses('SSD','Africa',100).
+encompasses('COM','Africa',100).
+encompasses('RG','Africa',100).
+encompasses('LB','Africa',100).
+encompasses('DJI','Africa',100).
+encompasses('ER','Africa',100).
+encompasses('ETH','Africa',100).
+encompasses('SP','Africa',100).
+encompasses('EAK','Africa',100).
+encompasses('WAG','Africa',100).
+encompasses('SN','Africa',100).
+encompasses('GNB','Africa',100).
+encompasses('WAL','Africa',100).
+encompasses('EAU','Africa',100).
+encompasses('LS','Africa',100).
+encompasses('RM','Africa',100).
+encompasses('MW','Africa',100).
+encompasses('MOC','Africa',100).
+encompasses('MS','Africa',100).
+encompasses('MAYO','Africa',100).
+encompasses('SD','Africa',100).
+encompasses('REUN','Africa',100).
+encompasses('HELX','Africa',100).
+encompasses('STP','Africa',100).
+encompasses('SY','Africa',100).
+
+query(N) :- encompasses(C, 'Asia', _), country(N, C, _, _, _, _).

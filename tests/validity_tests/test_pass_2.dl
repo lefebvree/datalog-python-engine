@@ -1,0 +1,32 @@
+
+chaina($x).
+chainb($x).
+chainc($x).
+chaind($x).
+chaine($x).
+chainf($x).
+chaing($x).
+chainh($x).
+chaini($x).
+chainj($x).
+chainx($x).
+
+chaina($x) -> chainb($x).
+chainb($x) -> chainc($x).
+chainc($x) -> chaind($x).
+chaind($x) -> chaine($x).
+chaine($x) -> chainf($x).
+chainf($x) -> chaing($x).
+chaing($x) -> chainh($x).
+chainh($x) -> chaini($x).
+chaini($x) -> chainj($x).
+
+chainj($x) -> chainx($x).
+
+chainj($x) -> query($x).
+
+chaina(vara).
+chaina(varb).
+chaind(varc).
+
+chainx(false).

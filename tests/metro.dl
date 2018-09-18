@@ -1,0 +1,24 @@
+# EDB
+link(Charpennes, Perrache).
+link(PartDieu, Charpennes).
+link(Debourg, PartDieu).
+link(PartDieu, Debourg).
+link(Perrache, Doua).
+link(Fourviere, Doua).
+
+# IDB
+metro ( $x ) .
+link($x, $y).
+reachable ( $x , $y ) .
+query($y).
+
+# MAPPING
+link($X, $Y) -> metro ($X).
+link($X, $Y) -> metro ($Y).
+link($a, $b) -> reachable($a, $b).
+link($t, $u), reachable($u ,$v) -> reachable($t, $v).
+
+reachable(PartDieu, $fromPartdieu) -> query($fromPartdieu).
+reachable($toDoua, Doua) -> query($toDoua).
+link(PartDieu, $a) -> query($a).
+link($a, $b) -> query($a, $b).
